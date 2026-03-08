@@ -1,65 +1,72 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Ihsan Development Waqf | وقف تنمية الإحسان</title>
-  <meta name="description" content="Ihsan Development Waqf (وقف تنمية الإحسان) — a mixed family & charitable waqf based in Makkah, Saudi Arabia." />
+  <meta name="description" content="Ihsan Development Waqf (وقف تنمية الإحسان) — a mixed family & charitable waqf based in Makkah, registered with the General Authority for Awqaf." />
   <meta name="theme-color" content="#0F4D3A" />
+  <link rel="icon" href="logo.png" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand">
-        <!-- Simple text logo (replace with SVG later if you want) -->
-        <div class="brand-mark" aria-hidden="true">إحسان</div>
+      <a class="brand" href="#top" aria-label="Ihsan Development Waqf home">
+        <img class="brand-logo" src="logo.png" alt="Ihsan Development Waqf logo" />
         <div class="brand-text">
-          <div class="brand-en">Ihsan Development Waqf</div>
-          <div class="brand-ar" lang="ar" dir="rtl">وقف تنمية الإحسان</div>
+          <div class="brand-en" data-lang="en">Ihsan Development Waqf</div>
+          <div class="brand-ar" data-lang="ar" lang="ar" dir="rtl">وقف تنمية الإحسان</div>
         </div>
-      </div>
+      </a>
 
       <nav class="nav">
-        <button id="langToggle" class="btn ghost" type="button" aria-label="Toggle language">AR / EN</button>
-        <a class="btn" href="#contact">Contact</a>
+        <button id="langToggle" class="btn ghost" type="button" aria-label="Toggle language">AR</button>
+        <a class="btn" href="#contact" data-lang="en">Contact</a>
+        <a class="btn" href="#contact" data-lang="ar" lang="ar" dir="rtl">التواصل</a>
       </nav>
     </div>
   </header>
 
-  <main>
+  <main id="top">
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-copy">
           <h1 class="hero-title">
-            <span class="en">Sustainable stewardship. Enduring impact.</span>
-            <span class="ar" lang="ar" dir="rtl">استدامة في الإدارة. وأثرٌ ممتد.</span>
+            <span data-lang="en">Sustainable stewardship. Enduring impact.</span>
+            <span data-lang="ar" lang="ar" dir="rtl">استدامة في الإدارة. وأثرٌ ممتد.</span>
           </h1>
 
-          <p class="hero-subtitle en">
-            A mixed family & charitable waqf based in Makkah, Saudi Arabia — registered with the General Authority for Awqaf.
+          <p class="hero-subtitle" data-lang="en">
+            A mixed family & charitable waqf based in Makkah — registered with the General Authority for Awqaf.
           </p>
-          <p class="hero-subtitle ar" lang="ar" dir="rtl">
-            وقفٌ ذريٌّ خيريّ (مشترك) مقره مكة المكرمة، ومسجّل لدى الهيئة العامة للأوقاف في المملكة العربية السعودية.
+          <p class="hero-subtitle" data-lang="ar" lang="ar" dir="rtl">
+            وقفٌ ذريٌّ خيريّ (مشترك) مقره مكة المكرمة، ومسجّل لدى الهيئة العامة للأوقاف.
           </p>
 
           <div class="hero-actions">
-            <a class="btn" href="#about">About</a>
-            <a class="btn ghost" href="#focus">Focus</a>
+            <a class="btn" href="#about" data-lang="en">About</a>
+            <a class="btn" href="#about" data-lang="ar" lang="ar" dir="rtl">نبذة</a>
+            <a class="btn ghost" href="#focus" data-lang="en">Focus</a>
+            <a class="btn ghost" href="#focus" data-lang="ar" lang="ar" dir="rtl">النطاق</a>
           </div>
         </div>
 
         <div class="hero-card" aria-hidden="true">
           <div class="card">
             <div class="kpi">
-              <div class="kpi-label">Core principles</div>
-              <div class="kpi-value">Shariah • Governance • Sustainability</div>
+              <div class="kpi-label" data-lang="en">Core principles</div>
+              <div class="kpi-label" data-lang="ar" lang="ar" dir="rtl">المبادئ</div>
+              <div class="kpi-value" data-lang="en">Governance • Sustainability</div>
+              <div class="kpi-value" data-lang="ar" lang="ar" dir="rtl">الحوكمة • الاستدامة</div>
             </div>
             <div class="divider"></div>
             <div class="kpi">
-              <div class="kpi-label">نطاق العمل</div>
-              <div class="kpi-value" lang="ar" dir="rtl">إدارة الأصول • تنمية الاستثمارات • أوجه البر</div>
+              <div class="kpi-label" data-lang="en">Scope</div>
+              <div class="kpi-label" data-lang="ar" lang="ar" dir="rtl">نطاق العمل</div>
+              <div class="kpi-value" data-lang="en">Asset management • Development • Charity</div>
+              <div class="kpi-value" data-lang="ar" lang="ar" dir="rtl">إدارة الأصول • تنمية الاستثمارات • أوجه البر</div>
             </div>
           </div>
         </div>
@@ -69,20 +76,20 @@
     <section id="about" class="section">
       <div class="container split">
         <div>
-          <h2 class="section-title">About</h2>
-          <p class="en">
-            Ihsan Development Waqf is a mixed family and charitable waqf based in Makkah, Saudi Arabia, registered with
-            the General Authority for Awqaf. We manage and grow assets in line with Shariah principles and sound
-            governance to ensure long-term sustainability. Proceeds are allocated for operations and maintenance,
-            reserve-building and development, eligible family beneficiaries, and impactful charitable initiatives.
+          <h2 class="section-title" data-lang="en">About</h2>
+          <p class="body" data-lang="en">
+            Ihsan Development Waqf is a mixed family and charitable waqf based in Makkah, registered with the General Authority for Awqaf.
+            We manage and grow assets with sound governance to ensure long-term sustainability.
+            Proceeds are allocated for operations and maintenance, reserve-building and development, eligible family beneficiaries,
+            and impactful charitable initiatives.
           </p>
         </div>
 
         <div lang="ar" dir="rtl">
-          <h2 class="section-title">نبذة</h2>
-          <p class="ar">
-            وقف تنمية الإحسان هو وقفٌ ذريٌّ خيريّ (مشترك) مقره مكة المكرمة، ومسجّل لدى الهيئة العامة للأوقاف في المملكة العربية السعودية.
-            نُعنى بإدارة الأصول وتنميتها وفق الضوابط الشرعية والحوكمة، بما يحقق الاستدامة المالية للوقف.
+          <h2 class="section-title" data-lang="ar">نبذة</h2>
+          <p class="body" data-lang="ar">
+            وقف تنمية الإحسان هو وقفٌ ذريٌّ خيريّ (مشترك) مقره مكة المكرمة، ومسجّل لدى الهيئة العامة للأوقاف.
+            نُعنى بإدارة الأصول وتنميتها وفق الحوكمة بما يحقق الاستدامة المالية للوقف.
             وتُخصَّص الغلة لتغطية التشغيل والصيانة، وبناء الاحتياطي وتنمية الأصول، ودعم المستحقين من الذرية، إضافةً إلى أوجه البر ذات الأثر المتعدّي.
           </p>
         </div>
@@ -91,22 +98,29 @@
 
     <section id="focus" class="section muted">
       <div class="container">
-        <h2 class="section-title">What we do</h2>
+        <h2 class="section-title" data-lang="en">What we do</h2>
+        <h2 class="section-title" data-lang="ar" lang="ar" dir="rtl">ماذا نعمل</h2>
+
         <div class="grid">
           <div class="tile">
-            <h3>Asset Management</h3>
-            <p class="en">Maintain, operate, and protect waqf assets with disciplined oversight.</p>
-            <p class="ar" lang="ar" dir="rtl">إدارة الأصول وتشغيلها وصيانتها وحفظها وفق أفضل الممارسات.</p>
+            <h3 data-lang="en">Asset Management</h3>
+            <h3 data-lang="ar" lang="ar" dir="rtl">إدارة الأصول</h3>
+            <p data-lang="en">Maintain, operate, and protect waqf assets with disciplined oversight.</p>
+            <p data-lang="ar" lang="ar" dir="rtl">تشغيل الأصول وصيانتها وحمايتها وفق أفضل الممارسات.</p>
           </div>
+
           <div class="tile">
-            <h3>Development & Reserves</h3>
-            <p class="en">Build reserves and invest prudently to strengthen long-term sustainability.</p>
-            <p class="ar" lang="ar" dir="rtl">بناء الاحتياطي وتنمية الأصول عبر استثمارات منخفضة المخاطر وبحوكمة.</p>
+            <h3 data-lang="en">Development & Reserves</h3>
+            <h3 data-lang="ar" lang="ar" dir="rtl">التنمية والاحتياطي</h3>
+            <p data-lang="en">Build reserves and invest prudently to strengthen long-term sustainability.</p>
+            <p data-lang="ar" lang="ar" dir="rtl">بناء الاحتياطي وتنمية الأصول عبر استثمارات منضبطة وبحوكمة.</p>
           </div>
+
           <div class="tile">
-            <h3>Beneficiaries & Charity</h3>
-            <p class="en">Allocate proceeds to eligible family beneficiaries and impactful charitable initiatives.</p>
-            <p class="ar" lang="ar" dir="rtl">تخصيص الغلة للمستحقين من الذرية وأوجه البر ذات الأثر المتعدّي.</p>
+            <h3 data-lang="en">Beneficiaries & Charity</h3>
+            <h3 data-lang="ar" lang="ar" dir="rtl">المستحقون والبر</h3>
+            <p data-lang="en">Allocate proceeds to eligible family beneficiaries and impactful charitable initiatives.</p>
+            <p data-lang="ar" lang="ar" dir="rtl">تخصيص الغلة للمستحقين من الذرية وأوجه البر ذات الأثر المتعدّي.</p>
           </div>
         </div>
       </div>
@@ -115,21 +129,20 @@
     <section id="contact" class="section">
       <div class="container split">
         <div>
-          <h2 class="section-title">Contact</h2>
-          <p class="en">For official inquiries, please contact us:</p>
-          <ul class="list">
-            <!-- Replace with your real email -->
-            <li><strong>Email:</strong> <a href="mailto:info@ihsandev.sa">info@ihsandev.sa</a></li>
-            <li><strong>Location:</strong> Makkah, Saudi Arabia</li>
+          <h2 class="section-title" data-lang="en">Contact</h2>
+          <p class="body" data-lang="en">For official inquiries:</p>
+          <ul class="list" data-lang="en">
+            <li><strong>Email:</strong> <img class="email-img" src="email.png" alt="info@ihsandev.sa" /></li>
+            <li><strong>Location:</strong> Makkah</li>
           </ul>
         </div>
 
         <div lang="ar" dir="rtl">
-          <h2 class="section-title">التواصل</h2>
-          <p class="ar">للاستفسارات الرسمية:</p>
-          <ul class="list ar">
-            <li><strong>البريد:</strong> <a href="mailto:info@ihsandev.sa">info@ihsandev.sa</a></li>
-            <li><strong>الموقع:</strong> مكة المكرمة، المملكة العربية السعودية</li>
+          <h2 class="section-title" data-lang="ar">التواصل</h2>
+          <p class="body" data-lang="ar">للاستفسارات الرسمية:</p>
+          <ul class="list ar" data-lang="ar">
+            <li><strong>البريد:</strong> <img class="email-img" src="email.png" alt="info@ihsandev.sa" /></li>
+            <li><strong>الموقع:</strong> مكة المكرمة</li>
           </ul>
         </div>
       </div>
