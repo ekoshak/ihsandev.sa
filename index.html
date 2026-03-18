@@ -23,15 +23,17 @@ body.en{font-family:'Cormorant Garamond',serif;direction:ltr;text-align:left}
 
 .pattern-bg{position:fixed;inset:0;z-index:0;opacity:0.04;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cg fill='none' stroke='%231a4030' stroke-width='0.8'%3E%3Cpolygon points='40,5 75,25 75,55 40,75 5,55 5,25'/%3E%3Cpolygon points='40,18 62,30 62,50 40,62 18,50 18,30'/%3E%3Cline x1='40' y1='5' x2='40' y2='18'/%3E%3Cline x1='75' y1='25' x2='62' y2='30'/%3E%3Cline x1='75' y1='55' x2='62' y2='50'/%3E%3Cline x1='40' y1='75' x2='40' y2='62'/%3E%3Cline x1='5' y1='55' x2='18' y2='50'/%3E%3Cline x1='5' y1='25' x2='18' y2='30'/%3E%3C/g%3E%3C/svg%3E");background-size:80px 80px}
 
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1rem 2.5rem;background:rgba(247,242,232,0.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border);transition:all 0.4s}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0.75rem 2.5rem;background:rgba(247,242,232,0.88);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--border);transition:all 0.4s}
 nav.scrolled{background:rgba(247,242,232,0.97);box-shadow:0 2px 24px var(--shadow)}
-.nav-logo{display:flex;align-items:center;gap:0.75rem;text-decoration:none}
-.nav-logo img{height:42px;object-fit:contain}
-.nav-logo-text{display:flex;flex-direction:column;line-height:1.2}
-.nav-logo-main{font-family:'Amiri',serif;font-size:1rem;font-weight:700;color:var(--green-deep)}
-body.en .nav-logo-main{font-family:'Cormorant Garamond',serif;font-weight:600}
-.nav-logo-sub{font-family:'Cormorant Garamond',serif;font-size:0.75rem;color:var(--text-muted);letter-spacing:0.06em}
-body.en .nav-logo-sub{font-family:'Noto Naskh Arabic',serif}
+.nav-logo{display:flex;align-items:center;gap:1rem;text-decoration:none}
+.nav-logo img{height:64px;object-fit:contain;filter:drop-shadow(0 1px 3px rgba(15,45,31,0.12))}
+/* تلوين الشعار ليتناسب مع ألوان الموقع — يمكن تعديل hue-rotate لتغيير اللون */
+#site-logo{filter: brightness(0) saturate(100%) invert(13%) sepia(40%) saturate(800%) hue-rotate(110deg) brightness(0.7)}
+.nav-logo-text{display:flex;flex-direction:column;line-height:1.3}
+.nav-logo-main{font-family:'Amiri',serif;font-size:1.2rem;font-weight:700;color:var(--green-deep)}
+body.en .nav-logo-main{font-family:'Cormorant Garamond',serif;font-weight:600;font-size:1.15rem}
+.nav-logo-sub{font-family:'Cormorant Garamond',serif;font-size:0.82rem;color:var(--text-muted);letter-spacing:0.06em}
+body.en .nav-logo-sub{font-family:'Noto Naskh Arabic',serif;font-size:0.85rem}
 .nav-right{display:flex;align-items:center;gap:2rem}
 .nav-links{display:flex;gap:2rem;list-style:none}
 .nav-links a{font-size:0.88rem;color:var(--text-mid);text-decoration:none;letter-spacing:0.04em;position:relative;transition:color 0.25s}
@@ -149,7 +151,7 @@ body.en .ar{display:none}
 <!-- NAV -->
 <nav id="main-nav">
   <a href="#" class="nav-logo">
-    <img src="logo-wordmark.png" alt="وقف تنمية الإحسان" onerror="this.style.display='none'">
+    <img src="وقف_تنمية_الا_حسان_مبسط-01.svg" alt="وقف تنمية الإحسان" id="site-logo" onerror="this.src='logo-wordmark.png'; this.onerror=null;">
     <span class="nav-logo-text">
       <span class="nav-logo-main ar">وقف تنمية الإحسان</span>
       <span class="nav-logo-main en-t">Ihsan Development Waqf</span>
