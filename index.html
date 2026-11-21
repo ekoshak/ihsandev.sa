@@ -229,7 +229,7 @@ body.en .ar{display:none}
   <div class="hero-orb" aria-hidden="true"></div>
 
   <h1 class="hero-title">
-    <span class="ar">استدامةٌ الأصول<br>وأثرٌ ممتدٌ ومتعدٍّ</span>
+    <span class="ar">استدامةُ الأصول<br>وأثرٌ ممتدٌ ومتعدٍّ</span>
     <span class="en-t">Sustainable Assets.<br>Enduring &amp; Far-Reaching Impact.</span>
   </h1>
 
@@ -264,7 +264,7 @@ body.en .ar{display:none}
       </p>
       <p class="section-body" style="margin-top:1rem">
         <span class="ar">تُخصَّص غلّة الوقف لتغطية مصاريف التشغيل والصيانة، وبناء الاحتياطي وتنمية الأصول، ودعم الذرية المستحقة، إضافةً إلى أوجه البر ذات الأثر المتعدّي.</span>
-        <span class="en-t">Proceeds are allocated across four channels: operations and maintenance, reserve-building, eligible family beneficiaries, and meaningful charitable initiatives with lasting community impact.</span>
+        <span class="en-t">Proceeds first cover operations and maintenance; the remainder is allocated to reserves, asset development, eligible family beneficiaries, and charitable initiatives with lasting community impact.</span>
       </p>
     </div>
     <div class="about-visual" style="display:flex;align-items:center;justify-content:center">
@@ -338,8 +338,8 @@ body.en .ar{display:none}
       <div class="value-label"><span class="ar">ثانياً</span><span class="en-t">II</span></div>
       <div class="value-title"><span class="ar">الشفافية والمساءلة</span><span class="en-t">Transparency &amp; Accountability</span></div>
       <p style="font-size:0.92rem;color:var(--text-mid);line-height:1.85">
-        <span class="ar">تقارير دورية منتظمة وتدقيق مستقل لضمان حقوق جميع الأطراف.</span>
-        <span class="en-t">Regular reporting and independent auditing to safeguard the rights of all stakeholders.</span>
+        <span class="ar">تقارير دورية منتظمة وقوائم مالية وفق معايير الهيئة السعودية للمراجعين والمحاسبين، لضمان حقوق جميع الأطراف.</span>
+        <span class="en-t">Regular reporting and financial statements prepared under SOCPA standards, safeguarding the rights of all stakeholders.</span>
       </p>
     </div>
     <div class="value-item">
@@ -375,14 +375,27 @@ body.en .ar{display:none}
   <div class="footer-inner">
     <span class="footer-logo">وقف تنمية الإحسان</span>
     <span style="color:rgba(247,242,232,0.4);font-size:0.78rem">
-      <span class="ar">جميع الحقوق محفوظة © ١٤٤٧هـ</span>
-      <span class="en-t">All rights reserved © 2026</span>
+      <span class="ar">جميع الحقوق محفوظة © <span id="year-hijri">١٤٤٨</span>هـ</span>
+      <span class="en-t">All rights reserved © <span id="year-greg">2026</span></span>
     </span>
     <span style="font-family:'Cormorant Garamond',serif;font-style:italic;color:rgba(197,150,58,0.5);font-size:0.85rem">Ihsan Development Waqf</span>
   </div>
 </footer>
 
 <script>
+// Footer years: Hijri (Umm al-Qura) and Gregorian, updated automatically
+(() => {
+  const now = new Date();
+  const g = document.getElementById('year-greg');
+  if (g) g.textContent = now.getFullYear();
+  const h = document.getElementById('year-hijri');
+  try {
+    const part = new Intl.DateTimeFormat('ar-SA-u-ca-islamic-umalqura-nu-arab', {year: 'numeric'})
+      .formatToParts(now).find(p => p.type === 'year');
+    if (h && part) h.textContent = part.value;
+  } catch (e) { /* keep the static fallback */ }
+})();
+
 // NAV scroll effect
 window.addEventListener('scroll', () =>
   document.getElementById('main-nav').classList.toggle('scrolled', scrollY > 60)
